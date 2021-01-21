@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="contactForm" remove="true"/>
+        <referenceContainer name="content">
+            <block class="Magento\Contact\Block\ContactForm" name="magelearn.contact.attachment" template="Magelearn_ContactAttachment::form.phtml">
+            	<container name="form.additional.info" label="Form Additional Info"/>
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Magento\Contact\ViewModel\UserDataProvider</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
